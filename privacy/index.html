@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f6f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f0d" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Privacy Policy for Potato Phone (깡통폰 · ポテトフォン), an iOS app by teamhyeok. No account, no analytics, no tracking. Everything stays on your iPhone.">
+<title>Privacy Policy · Potato Phone</title>
+<!-- No external resources: system fonts only, and an empty icon so the browser doesn't request /favicon.ico. -->
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --bg: #f6f6f2;
+    --surface: #ffffff;
+    --text: #17170f;
+    --muted: #55554e;
+    --faint: #85857c;
+    --line: #e1e1da;
+    --gist: #ebefe2;
+    --gist-line: #d5dcc8;
+    --link: #17170f;
+    --link-line: #a8a89e;
+    --bar: rgba(246, 246, 242, 0.94);
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --sans-ko: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Segoe UI", sans-serif;
+    --sans-ja: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", "Noto Sans JP", sans-serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f0f0d;
+      --surface: #171714;
+      --text: #ebebe4;
+      --muted: #aaaaa0;
+      --faint: #808078;
+      --line: #2a2a25;
+      --gist: #181c13;
+      --gist-line: #2c3324;
+      --link: #ebebe4;
+      --link-line: #6a6a62;
+      --bar: rgba(15, 15, 13, 0.94);
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+  }
+  :lang(ko) { font-family: var(--sans-ko); word-break: keep-all; line-height: 1.8; }
+  :lang(ja) { font-family: var(--sans-ja); line-break: strict; line-height: 1.85; }
+
+  .wrap {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding-left: max(1.25rem, env(safe-area-inset-left));
+    padding-right: max(1.25rem, env(safe-area-inset-right));
+  }
+
+  /* Language bar: plain anchor links, works without JavaScript */
+  .langbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bar);
+    border-bottom: 1px solid var(--line);
+  }
+  @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .langbar { -webkit-backdrop-filter: saturate(1.4) blur(12px); backdrop-filter: saturate(1.4) blur(12px); }
+  }
+  .langbar .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 3.25rem;
+  }
+  .langbar-name {
+    font-weight: 650;
+    font-size: 0.9375rem;
+    letter-spacing: -0.005em;
+    white-space: nowrap;
+  }
+  .langbar ul {
+    display: flex;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .langbar a {
+    display: block;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.9375rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .langbar a:hover, .langbar a:focus-visible { color: var(--text); background: var(--line); }
+
+  /* Masthead */
+  .masthead { padding: 3rem 0 1rem; }
+  .names {
+    margin: 0 0 0.5rem;
+    color: var(--muted);
+    font-size: 0.9375rem;
+  }
+  .names span + span::before { content: "·"; margin: 0 0.45em; color: var(--faint); }
+  h1 {
+    margin: 0;
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  .cursor {
+    display: inline-block;
+    width: 0.42em;
+    height: 0.86em;
+    margin-left: 0.12em;
+    vertical-align: -0.06em;
+    background: currentColor;
+    animation: blink 1.2s steps(1, end) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+  .subtitles { margin: 0.6rem 0 0; color: var(--muted); }
+  .subtitles span + span::before { content: "·"; margin: 0 0.45em; color: var(--faint); }
+  .hint { margin: 1rem 0 0; color: var(--muted); font-size: 0.9375rem; }
+
+  /* One language */
+  .policy { padding: 2.5rem 0 1rem; scroll-margin-top: 3.5rem; }
+  .policy + .policy { border-top: 1px solid var(--line); margin-top: 2.5rem; }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--faint);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+  .meta { margin: 0.4rem 0 1.5rem; color: var(--muted); font-size: 0.9375rem; }
+  .lead { margin: 0 0 1.5rem; }
+
+  .gist {
+    margin: 0 0 2rem;
+    padding: 1.1rem 1.25rem 1.15rem;
+    background: var(--gist);
+    border: 1px solid var(--gist-line);
+    border-radius: 14px;
+  }
+  .gist h3 { margin: 0 0 0.4rem; font-size: 0.9375rem; }
+  .gist ul { margin: 0; padding-left: 1.2rem; }
+  .gist li { margin: 0.2rem 0; }
+
+  h3 {
+    margin: 2.1rem 0 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+  p { margin: 0 0 0.85rem; }
+  ul { margin: 0 0 0.85rem; padding-left: 1.25rem; }
+  li { margin: 0.3rem 0; }
+  li::marker { color: var(--faint); }
+  b, strong { font-weight: 650; }
+
+  dl.perm { margin: 0.75rem 0 1rem; }
+  dl.perm dt { margin-top: 1rem; font-weight: 650; }
+  dl.perm dd { margin: 0.25rem 0 0; }
+  .tag {
+    display: inline-block;
+    margin-left: 0.4em;
+    padding: 0 0.5em;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.6;
+    vertical-align: 0.12em;
+  }
+
+  .contact {
+    margin: 0.5rem 0 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+  .contact p { margin: 0.15rem 0; }
+
+  .note { color: var(--muted); font-size: 0.9375rem; }
+
+  a { color: var(--link); text-decoration: underline; text-decoration-color: var(--link-line); text-underline-offset: 0.18em; }
+  a:hover { text-decoration-color: currentColor; }
+  a[href^="mailto:"], .break { overflow-wrap: anywhere; }
+  .nowrap { white-space: nowrap; }
+  :focus-visible { outline: 2px solid currentColor; outline-offset: 2px; border-radius: 4px; }
+
+  footer {
+    margin-top: 3rem;
+    padding: 1.5rem 0 3rem;
+    border-top: 1px solid var(--line);
+    color: var(--faint);
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 380px) {
+    body { font-size: 1rem; }
+    .langbar-name { display: none; }
+    .langbar .wrap { justify-content: center; }
+  }
+  @media print {
+    .langbar { display: none; }
+    .cursor { animation: none; }
+    body { background: #fff; color: #000; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="langbar" aria-label="Language">
+  <div class="wrap">
+    <span class="langbar-name">Potato Phone</span>
+    <ul>
+      <li><a href="#en" hreflang="en" lang="en">English</a></li>
+      <li><a href="#ko" hreflang="ko" lang="ko">한국어</a></li>
+      <li><a href="#ja" hreflang="ja" lang="ja">日本語</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="masthead">
+    <p class="names"><span lang="en">Potato Phone</span><span lang="ko">깡통폰</span><span lang="ja">ポテトフォン</span></p>
+    <h1>Privacy Policy<span class="cursor" aria-hidden="true"></span></h1>
+    <p class="subtitles"><span lang="ko">개인정보 처리방침</span><span lang="ja" class="nowrap">プライバシーポリシー</span></p>
+    <noscript>
+      <p class="hint"><span lang="ko">한국어는 위의 <a href="#ko">한국어</a>를 누르세요.</span> <span lang="ja">日本語は上の<a href="#ja">日本語</a>を押してください。</span></p>
+    </noscript>
+  </header>
+
+  <!-- ===================================================== English -->
+  <article class="policy" id="en" lang="en">
+    <header>
+      <p class="eyebrow">English</p>
+      <h2>Potato Phone Privacy Policy</h2>
+      <p class="meta">Effective <time datetime="2026-10-09">October 9, 2026</time> · Developer: teamhyeok</p>
+    </header>
+
+    <p class="lead">Potato Phone (<span lang="ko">깡통폰</span> in Korean, <span lang="ja">ポテトフォン</span> in Japanese) is an iOS app that makes your Home Screen quiet with text-only widgets and blocks distracting apps with Screen Time. It is built so that your data stays on your iPhone.</p>
+
+    <section class="gist">
+      <h3>In short</h3>
+      <ul>
+        <li>No account and no sign-in.</li>
+        <li>No analytics, ads or tracking. The app makes no network requests of its own.</li>
+        <li>Everything you set up stays on your iPhone. We never receive it.</li>
+        <li>We share nothing with third parties.</li>
+      </ul>
+    </section>
+
+    <h3>1. What we collect</h3>
+    <p>Nothing. Potato Phone has no account or sign-in and does not collect personal information. It contains no analytics, advertising, crash-reporting or tracking SDKs (no third-party code at all), it does not use the advertising identifier, and it does not track you across other companies’ apps or websites. The app itself never sends a network request, so nothing you enter or set up in it reaches us or anyone else.</p>
+    <p>The only time we receive anything is when you choose to email us (section 6).</p>
+
+    <h3>2. What stays on your iPhone</h3>
+    <p>To work, the app saves the following in its own storage on your iPhone. Most of it is kept in an App Group, a container shared only with the app’s own widgets and Screen Time extensions.</p>
+    <ul>
+      <li><b>Launchers:</b> their names, the apps on each page (including names and links you add yourself), and which launcher is in use.</li>
+      <li><b>Styles:</b> theme, colors, font, size, spacing, alignment, numbering and standby text.</li>
+      <li><b>Detox settings:</b> mode, schedules, the apps you picked (as Screen Time tokens, see section 3) and your lock. A PIN is kept only as a salted <span class="nowrap">SHA-256</span> hash; an NFC tag only as a <span class="nowrap">SHA-256</span> hash of its identifier, plus the name you give it.</li>
+      <li><b>Detox status:</b> whether detox is on, when it ends and how many pauses are left today.</li>
+      <li><b>Pro status:</b> whether Pro is unlocked, so widgets can check it without going online.</li>
+      <li>Fonts that come with the app, copied there so the widgets can use them, and a few small flags (for example, whether a notice was already shown).</li>
+    </ul>
+    <p>None of this is sent to us or to anyone else, and we cannot see it. If you back up your iPhone with iCloud Backup or a computer, iOS may include it in that backup. Backups are handled by Apple, and we have no access to them.</p>
+
+    <h3>3. Permissions</h3>
+    <p>Every permission is optional. If you don’t allow one, everything else in the app keeps working.</p>
+    <dl class="perm">
+      <dt>Screen Time (Family Controls)<span class="tag">Optional</span></dt>
+      <dd>Used only to block the apps and websites you choose, when you turn detox on or on a schedule you set. You choose them in Apple’s own picker, and iOS gives the app only opaque tokens. The app can’t tell which apps or websites the tokens stand for, and it can’t see how you use them: it never reads Screen Time usage data. The tokens are stored only on your iPhone and never leave it. When you open a blocked app, iOS passes that app’s name (or the website’s address) to the app’s block-screen extension so it can be shown on the block screen. It is used only to draw that screen and is never saved or sent.</dd>
+
+      <dt>NFC<span class="tag">Optional</span></dt>
+      <dd>Used only when you link or check a card or sticker for the detox lock. The app takes the tag’s identifier (its serial number), turns it into a <span class="nowrap">SHA-256</span> hash right away, and stores only that hash on your iPhone. The identifier itself is not kept, and the card’s contents, such as payment or transit card data or a balance, are never read. Cards that change their identifier on every tap can’t be linked.</dd>
+
+      <dt>Photos, add only<span class="tag">Optional</span></dt>
+      <dd>Used only to save a wallpaper image that the app makes (a solid color that matches your widgets) to Photos. With add-only access, the app can’t see or read your photos.</dd>
+
+      <dt>Notifications<span class="tag">Optional</span></dt>
+      <dd>Local only. When you tap “Turn off detox…” on the block screen, your iPhone shows a notification that takes you back to the app. Notifications are created on the device. The app doesn’t use push notifications and has no server.</dd>
+    </dl>
+
+    <h3>4. Purchases</h3>
+    <p>Potato Phone Pro is a one-time in-app purchase (not a subscription) sold through the App Store, and Apple processes the payment. We never receive your name, payment details or Apple Account information. The app checks what you have bought through Apple’s StoreKit and keeps only the result (your Pro status) on your iPhone. Apple handles purchase information under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</p>
+
+    <h3>5. Apple features, links and other apps</h3>
+    <p>Siri, Shortcuts, Focus filters, widgets and Control Center run through iOS, and Siri requests are processed by Apple. If you have chosen in iOS Settings to share analytics with app developers, Apple may give us crash reports and statistics that don’t identify you.</p>
+    <p>Links you tap (Apple support pages, the App Store, an iCloud link to a shortcut) and the apps or websites your widgets open are handled by those apps and websites under their own privacy policies. Potato Phone doesn’t pass your personal information to them.</p>
+
+    <h3>6. If you email us</h3>
+    <p>“Contact us” and “Request an app” open your Mail app with a message to teamhyeok@gmail.com. Nothing is sent unless you send it. If you do, we receive your email address and what you wrote. To help us troubleshoot, a “Contact us” message starts with the app version, iOS version and device model; you can delete those lines before sending.</p>
+    <p>We use your message only to reply to you, and we don’t share it. Email is received through Gmail, so it is stored on servers of Google LLC (United States) under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. We keep it only as long as needed to help you, and delete it right away if you ask.</p>
+
+    <h3>7. Sharing with third parties</h3>
+    <p>We don’t sell, rent or share personal information with third parties, and we don’t use it for advertising.</p>
+
+    <h3>8. Keeping and deleting data</h3>
+    <ul>
+      <li>Data on your iPhone stays until you change it in the app or delete the app. Deleting Potato Phone removes everything it stored.</li>
+      <li>Turn detox off before you delete the app, so no app stays blocked.</li>
+      <li>Wallpapers you saved stay in Photos until you delete them there. Purchases stay with your Apple Account.</li>
+      <li>Emails are deleted once we no longer need them to help you, or sooner if you ask.</li>
+    </ul>
+
+    <h3>9. Your choices and rights</h3>
+    <ul>
+      <li>Edit or delete launchers, styles, schedules and locks in the app at any time.</li>
+      <li>Turn permissions off at any time in the iOS Settings app. Screen Time access is under Settings &gt; Screen Time.</li>
+      <li>To see, correct or delete an email you sent us, write to <a href="mailto:teamhyeok@gmail.com">teamhyeok@gmail.com</a>.</li>
+    </ul>
+
+    <h3>10. Children</h3>
+    <p>Potato Phone is not directed at children under 13, and we don’t knowingly collect personal information from children. If we learn that a child under 13 has emailed us, we will delete the message.</p>
+
+    <h3>11. Security</h3>
+    <p>Your data stays on your iPhone, protected by iOS app sandboxing and data protection. The app has no server that could be breached. PINs and NFC tag identifiers are stored only as hashes.</p>
+
+    <h3>12. Changes to this policy</h3>
+    <p>If anything changes, we will update this page and its effective date. If a future version of the app ever collects data, we will update this policy before that version is released.</p>
+
+    <h3>13. Contact</h3>
+    <div class="contact">
+      <p><b>teamhyeok</b>, developer of Potato Phone</p>
+      <p>Email: <a href="mailto:teamhyeok@gmail.com">teamhyeok@gmail.com</a></p>
+    </div>
+
+    <p class="note">About this page: it uses no cookies and loads nothing from other sites. It is hosted on GitHub Pages, and GitHub may log visitors’ IP addresses for security (<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>).</p>
+  </article>
+
+  <!-- ===================================================== 한국어 -->
+  <article class="policy" id="ko" lang="ko">
+    <header>
+      <p class="eyebrow">한국어</p>
+      <h2>깡통폰 개인정보 처리방침</h2>
+      <p class="meta">시행일 <time datetime="2026-10-09">2026년 10월 9일</time> · 개발자 teamhyeok</p>
+    </header>
+
+    <p class="lead">teamhyeok(이하 “개발자”)는 iOS 앱 깡통폰(영문 <span lang="en">Potato Phone</span>, 일본어 <span lang="ja">ポテトフォン</span>, 이하 “앱”)을 쓰는 분의 개인정보를 보호하기 위해 「개인정보 보호법」 제30조에 따라 이 처리방침을 공개합니다. 앱은 처음부터 개인정보를 수집하지 않도록 만들었습니다.</p>
+
+    <section class="gist">
+      <h3>요약</h3>
+      <ul>
+        <li>회원가입과 로그인이 없습니다.</li>
+        <li>분석·광고·추적 도구가 없고, 앱이 스스로 하는 네트워크 통신도 없습니다.</li>
+        <li>앱에서 정한 내용은 이용자의 iPhone에만 저장되며 개발자에게 전송되지 않습니다.</li>
+        <li>개인정보를 제3자에게 제공하지 않습니다.</li>
+      </ul>
+    </section>
+
+    <h3>1. 수집하는 개인정보 항목</h3>
+    <p>앱은 개인정보를 수집하지 않습니다. 회원가입·로그인이 없고, 분석·광고·오류 보고·추적용 SDK 같은 외부 코드를 하나도 넣지 않았습니다. 광고 식별자(IDFA)를 쓰지 않으며, 다른 회사의 앱이나 웹사이트에 걸쳐 이용자를 추적하지 않습니다. 앱은 스스로 네트워크 요청을 보내지 않으므로, 앱에서 입력하거나 설정한 내용은 개발자나 다른 누구에게도 전달되지 않습니다.</p>
+    <p>개발자가 정보를 받는 경우는 이용자가 직접 문의 메일을 보낼 때뿐이며, 이때 받는 항목은 다음과 같습니다.</p>
+    <ul>
+      <li>이메일 주소, 문의 내용</li>
+      <li>앱 버전, iOS 버전, 기기 모델 (‘문의하기’ 메일 본문에 미리 적혀 있으며, 보내기 전에 지울 수 있습니다)</li>
+    </ul>
+
+    <h3>2. 개인정보의 이용 목적</h3>
+    <p>문의 메일로 받은 정보는 문의에 답하는 데에만 씁니다. 그 밖의 목적으로 이용하지 않습니다.</p>
+
+    <h3>3. 개인정보의 보관 기간</h3>
+    <ul>
+      <li><b>문의 메일:</b> 문의를 처리하는 데 필요한 기간 동안만 보관하고, 처리가 끝나면 지체 없이 파기합니다. 삭제를 요청하시면 바로 삭제합니다.</li>
+      <li><b>기기 안 정보(4항):</b> 개발자가 보관하지 않습니다. 이용자가 앱에서 바꾸거나 앱을 삭제할 때까지 이용자의 iPhone에만 남습니다.</li>
+    </ul>
+
+    <h3>4. 이용자의 기기에만 저장되는 정보</h3>
+    <p>앱은 동작하기 위해 아래 정보를 iPhone 안의 앱 저장 공간에 저장합니다. 대부분은 앱과 앱의 위젯·스크린 타임 확장 프로그램만 함께 쓰는 App Group 공간에 있습니다. 이 정보는 개발자에게 전송되지 않으며, 개발자가 볼 수도 없습니다.</p>
+    <ul>
+      <li><b>런처:</b> 이름, 페이지별 앱 목록(이용자가 직접 추가한 이름과 링크 포함), 지금 쓰는 런처</li>
+      <li><b>꾸미기:</b> 테마, 색, 글꼴, 크기, 간격, 정렬, 번호, 대기화면 문구</li>
+      <li><b>디톡스 설정:</b> 방식, 예약, 고른 앱(스크린 타임 토큰, 5항), 잠금. PIN은 솔트를 더한 <span class="nowrap">SHA-256</span> 해시로만, NFC 태그는 고유번호의 <span class="nowrap">SHA-256</span> 해시와 이용자가 붙인 이름으로만 저장합니다.</li>
+      <li><b>디톡스 상태:</b> 켜져 있는지, 언제 끝나는지, 오늘 남은 풀기 횟수</li>
+      <li><b>Pro 상태:</b> Pro를 구매했는지 여부 (위젯이 인터넷 없이 확인할 수 있도록)</li>
+      <li>위젯이 쓰도록 복사해 둔 앱 내장 글꼴, 안내를 이미 보였는지 같은 작은 표시값</li>
+    </ul>
+    <p>iCloud 백업이나 컴퓨터로 iPhone을 백업하면 iOS가 이 정보를 백업에 포함할 수 있습니다. 백업은 Apple이 처리하며 개발자는 접근할 수 없습니다.</p>
+
+    <h3>5. 접근 권한 안내</h3>
+    <p>앱의 접근 권한은 모두 선택 권한이며, 필수 권한은 없습니다. 허용하지 않아도 해당 기능을 뺀 나머지는 그대로 쓸 수 있습니다.</p>
+    <dl class="perm">
+      <dt>스크린 타임 (Family Controls)<span class="tag">선택</span></dt>
+      <dd>이용자가 고른 앱과 웹사이트를 디톡스 중에 가리는 데에만 씁니다. 디톡스를 직접 켜거나 이용자가 정한 예약 시간에 동작합니다. 앱은 Apple이 제공하는 선택 화면에서 고른 항목을 내용을 알 수 없는 토큰으로만 받습니다. 그래서 앱은 그 토큰이 어떤 앱이나 웹사이트인지 알 수 없고, 사용 시간 같은 이용 기록도 볼 수 없습니다. 스크린 타임 사용 데이터는 읽지 않습니다. 토큰은 iPhone에만 저장되고 밖으로 나가지 않습니다. 가려진 앱을 열면 iOS가 그 앱 이름(또는 웹사이트 주소)을 앱의 가림 화면 확장 프로그램에 넘겨 가림 화면에 보여 줍니다. 이 이름은 가림 화면을 그리는 데에만 쓰이고 저장하거나 전송하지 않습니다.</dd>
+
+      <dt>NFC<span class="tag">선택</span></dt>
+      <dd>디톡스 잠금에 쓸 카드나 스티커를 연결하고 확인할 때에만 씁니다. 태그의 고유번호를 읽는 즉시 <span class="nowrap">SHA-256</span> 해시로 바꾸어 그 해시만 iPhone에 저장합니다. 고유번호 원문은 저장하지 않으며, 카드에 담긴 내용(결제·교통카드 정보, 잔액 등)은 읽지 않습니다. 댈 때마다 번호가 바뀌는 카드는 연결하지 않습니다.</dd>
+
+      <dt>사진 (추가 전용)<span class="tag">선택</span></dt>
+      <dd>앱이 만든 배경화면 이미지(위젯과 같은 색의 단색 이미지)를 사진 앱에 저장할 때에만 씁니다. 추가 전용 권한이라 앱은 이용자의 사진을 보거나 읽을 수 없습니다.</dd>
+
+      <dt>알림<span class="tag">선택</span></dt>
+      <dd>기기 안에서 만드는 로컬 알림만 씁니다. 가림 화면에서 ‘디톡스 끄러 가기’를 누르면 앱으로 돌아오는 알림을 보여 줍니다. 푸시 알림과 알림 서버는 쓰지 않습니다.</dd>
+    </dl>
+
+    <h3>6. 결제</h3>
+    <p>깡통폰 Pro는 App Store에서 판매하는 한 번 결제 상품(구독 아님)이며, 결제는 Apple이 처리합니다. 개발자는 이용자의 이름, 결제 수단, Apple 계정 정보를 받지 않습니다. 앱은 Apple의 StoreKit으로 구매 내역을 확인하고 그 결과(Pro 상태)만 iPhone에 저장합니다. 구매 정보는 <a href="https://www.apple.com/legal/privacy/">Apple 개인정보 처리방침</a>에 따라 처리됩니다.</p>
+
+    <h3>7. 개인정보의 제3자 제공</h3>
+    <p>개발자는 개인정보를 제3자에게 제공하거나 판매하지 않으며, 광고에 쓰지 않습니다.</p>
+
+    <h3>8. 개인정보 처리 위탁과 국외 이전</h3>
+    <p>개인정보 처리를 위탁하지 않습니다. 다만 문의 메일은 Google LLC의 Gmail로 받기 때문에, 이용자가 메일을 보내면 그 메일이 국외에 있는 Google 서버에 보관됩니다.</p>
+    <ul>
+      <li>이전받는 자: Google LLC (미국, Gmail)</li>
+      <li>이전 항목: 이메일 주소, 문의 내용 (1항의 기기 정보를 지우지 않았다면 그 내용 포함)</li>
+      <li>이전 시기와 방법: 이용자가 메일을 보낼 때 네트워크로 전송</li>
+      <li>이용 목적과 보관 기간: 문의 메일 수신과 보관, 3항의 보관 기간과 같음</li>
+      <li>거부 방법: 메일을 보내지 않으면 이전되지 않으며, 앱을 쓰는 데에는 영향이 없습니다.</li>
+    </ul>
+    <p>Google의 처리 방침: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+
+    <h3>9. Apple 기능, 링크, 다른 앱</h3>
+    <p>Siri, 단축어, 집중 모드 필터, 위젯, 제어 센터는 iOS를 통해 동작하며, Siri 요청은 Apple이 처리합니다. 이용자가 iOS 설정에서 앱 개발자와 분석 정보를 공유하도록 허용한 경우, Apple이 개인을 알아볼 수 없는 충돌 보고서와 통계를 개발자에게 제공할 수 있습니다.</p>
+    <p>이용자가 누른 링크(Apple 지원 페이지, App Store, iCloud 단축어 링크)와 위젯이 여는 다른 앱·웹사이트는 각자의 개인정보 처리방침을 따릅니다. 앱은 이들에게 이용자의 개인정보를 넘기지 않습니다.</p>
+
+    <h3>10. 개인정보의 파기 절차와 방법</h3>
+    <ul>
+      <li><b>기기 안 정보:</b> 앱에서 지우면 바로 삭제되고, 앱을 삭제하면 iOS가 앱이 저장한 정보를 모두 함께 삭제합니다. 앱을 지우기 전에 디톡스를 먼저 꺼 주세요. 사진 앱에 저장한 배경화면은 사진 앱에서 지울 때까지 남고, 구매 내역은 Apple 계정에 남습니다.</li>
+      <li><b>문의 메일:</b> 보관 기간이 끝나거나 삭제 요청을 받으면 메일함에서 되살릴 수 없도록 영구 삭제합니다.</li>
+    </ul>
+
+    <h3>11. 이용자의 권리와 행사 방법</h3>
+    <p>이용자는 언제든지 개인정보의 열람, 정정, 삭제, 처리정지를 요구할 수 있습니다. 개발자가 가진 개인정보는 문의 메일뿐이므로 <a href="mailto:teamhyeok@gmail.com">teamhyeok@gmail.com</a>으로 요청해 주시면 지체 없이 조치합니다. 법정대리인이나 위임을 받은 사람을 통해서도 요구할 수 있습니다.</p>
+    <p>기기 안 정보는 이용자가 앱에서 직접 바꾸거나 지울 수 있고, 접근 권한은 iOS 설정 앱에서 언제든 끌 수 있습니다. 스크린 타임 권한은 설정 &gt; 스크린 타임에 있습니다.</p>
+
+    <h3>12. 개인정보의 안전성 확보 조치</h3>
+    <ul>
+      <li>개인정보를 보관하는 서버가 없습니다. 기기 안 정보는 iOS의 앱 샌드박스와 데이터 보호 기능으로 보호됩니다.</li>
+      <li>PIN은 솔트를 더한 <span class="nowrap">SHA-256</span> 해시로만, NFC 태그 고유번호는 <span class="nowrap">SHA-256</span> 해시로만 저장합니다.</li>
+      <li>문의 메일은 개발자 외에는 열람하지 않습니다.</li>
+    </ul>
+
+    <h3>13. 자동 수집 장치의 설치·운영과 거부</h3>
+    <p>앱은 쿠키, 광고 식별자처럼 개인정보를 자동으로 수집하는 장치를 쓰지 않습니다. 이 웹 페이지도 쿠키를 쓰지 않고 다른 사이트에서 아무것도 불러오지 않습니다. 이 페이지는 GitHub Pages로 제공되며, GitHub이 보안을 위해 방문자의 IP 주소를 기록할 수 있습니다(<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub 개인정보 처리방침</a>).</p>
+
+    <h3>14. 아동의 개인정보</h3>
+    <p>앱은 13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알면서 수집하지 않습니다. 만 14세 미만 아동이 법정대리인의 동의 없이 문의 메일을 보낸 사실을 알게 되면 지체 없이 삭제합니다.</p>
+
+    <h3>15. 개인정보 보호책임자와 문의처</h3>
+    <div class="contact">
+      <p>개인정보 보호책임자: <b>teamhyeok</b> (깡통폰 개발자)</p>
+      <p>이메일: <a href="mailto:teamhyeok@gmail.com">teamhyeok@gmail.com</a></p>
+    </div>
+    <p>개인정보에 관한 문의, 불만 처리, 피해 구제는 위 이메일로 연락해 주세요.</p>
+
+    <h3>16. 권익침해 구제 방법</h3>
+    <p>개인정보 침해에 대한 구제를 받으려면 아래 기관에 분쟁 조정이나 상담을 신청할 수 있습니다.</p>
+    <ul>
+      <li>개인정보분쟁조정위원회: <span class="nowrap">(국번 없이) 1833-6972</span>, <a href="https://www.kopico.go.kr">www.kopico.go.kr</a></li>
+      <li>개인정보침해신고센터: <span class="nowrap">(국번 없이) 118</span>, <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a></li>
+      <li>대검찰청: <span class="nowrap">(국번 없이) 1301</span>, <a href="https://www.spo.go.kr">www.spo.go.kr</a></li>
+      <li>경찰청: <span class="nowrap">(국번 없이) 182</span>, <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a></li>
+    </ul>
+
+    <h3>17. 개인정보 처리방침의 변경</h3>
+    <p>이 처리방침은 2026년 10월 9일부터 적용됩니다. 내용이 바뀌면 이 페이지에 새 시행일과 함께 알립니다. 앞으로 개인정보를 수집하는 버전을 내게 되면, 그 버전을 내놓기 전에 이 처리방침을 먼저 고칩니다.</p>
+  </article>
+
+  <!-- ===================================================== 日本語 -->
+  <article class="policy" id="ja" lang="ja">
+    <header>
+      <p class="eyebrow">日本語</p>
+      <h2>ポテトフォン <span class="nowrap">プライバシーポリシー</span></h2>
+      <p class="meta">施行日 <time datetime="2026-10-09">2026年10月9日</time> · 開発者 teamhyeok</p>
+    </header>
+
+    <p class="lead">teamhyeok（以下「開発者」）は、iOSアプリ「ポテトフォン」（英語名 <span lang="en">Potato Phone</span>、韓国語名 <span lang="ko">깡통폰</span>。以下「本アプリ」）における利用者の情報の取り扱いについて、以下のとおり定めます。本アプリは、個人情報を取得しない設計になっています。</p>
+
+    <section class="gist">
+      <h3>要点</h3>
+      <ul>
+        <li>アカウント登録やサインインはありません。</li>
+        <li>分析・広告・トラッキングの仕組みはありません。本アプリが自ら通信することもありません。</li>
+        <li>本アプリで設定した内容はお使いのiPhoneの中だけに保存され、開発者には送信されません。</li>
+        <li>第三者に情報を提供することはありません。</li>
+      </ul>
+    </section>
+
+    <h3>1. 取得する情報</h3>
+    <p>本アプリは個人情報を取得しません。アカウントやサインインはなく、分析・広告・クラッシュレポート・トラッキング用のSDKなど、外部のコードは一切含まれていません。広告識別子（IDFA）は使わず、他社のアプリやWebサイトをまたいで利用者を追跡することもありません。本アプリは自らネットワーク通信を行わないため、本アプリで入力・設定した内容が開発者やほかの誰かに届くことはありません。</p>
+    <p>開発者が情報を受け取るのは、利用者がご自身でメールを送ってくださった場合だけです（6をご覧ください）。</p>
+
+    <h3>2. iPhoneの中だけに保存される情報</h3>
+    <p>本アプリは動作のために、次の情報をiPhone内の保存領域に保存します。その多くは、本アプリと本アプリのウィジェット・スクリーンタイム拡張機能だけが共有する領域（App Group）にあります。</p>
+    <ul>
+      <li><b>ランチャー：</b>名前、ページごとのアプリ一覧（ご自身で追加した名前やリンクを含む）、使用中のランチャー</li>
+      <li><b>スタイル：</b>テーマ、色、フォント、サイズ、間隔、揃え、番号、待受メッセージ</li>
+      <li><b>デトックスの設定：</b>方法、スケジュール、選んだアプリ（スクリーンタイムのトークン。3を参照）、ロック。PINはソルト付きの<span class="nowrap">SHA-256</span>ハッシュとしてのみ、NFCタグは識別番号の<span class="nowrap">SHA-256</span>ハッシュと付けた名前としてのみ保存します。</li>
+      <li><b>デトックスの状態：</b>オンかどうか、終了時刻、今日の残りの一時解除回数</li>
+      <li><b>Proの状態：</b>Proを購入済みかどうか（ウィジェットが通信せずに確認できるように）</li>
+      <li>ウィジェットで使うためにコピーした内蔵フォント、案内を表示済みかどうかなどの小さな記録</li>
+    </ul>
+    <p>これらの情報が開発者やほかの誰かに送信されることはなく、開発者が見ることもできません。iCloudバックアップやコンピュータでiPhoneをバックアップすると、iOSがこれらをバックアップに含めることがあります。バックアップはAppleが扱うもので、開発者はアクセスできません。</p>
+
+    <h3>3. アクセス許可</h3>
+    <p>どのアクセス許可も任意です。許可しなくても、その機能以外はそのままお使いいただけます。</p>
+    <dl class="perm">
+      <dt>スクリーンタイム（Family Controls）<span class="tag">任意</span></dt>
+      <dd>利用者が選んだアプリやWebサイトを、デトックス中にブロックするためだけに使います。デトックスは、ご自身でオンにしたときか、設定したスケジュールの時間に動きます。選択はApple純正の選択画面で行い、本アプリが受け取るのは中身の分からないトークンだけです。そのため本アプリは、それがどのアプリやWebサイトなのかも、どのように使われているかも知ることができません。スクリーンタイムの利用データは読み取りません。トークンはiPhoneの中にだけ保存され、外に出ることはありません。なお、ブロック中のアプリを開くと、iOSがそのアプリ名（またはWebサイトのアドレス）を本アプリのブロック画面用の拡張機能に渡し、ブロック画面に表示します。この名前は画面の表示だけに使われ、保存も送信もされません。</dd>
+
+      <dt>NFC<span class="tag">任意</span></dt>
+      <dd>デトックスのロックに使うカードやステッカーを登録・確認するときだけ使います。タグの識別番号（シリアル番号）を読み取るとすぐに<span class="nowrap">SHA-256</span>ハッシュに変換し、そのハッシュだけをiPhoneに保存します。識別番号そのものは保存せず、カードの中身（決済や交通系ICカードの情報、残高など）は読み取りません。タッチするたびに番号が変わるカードは登録できません。</dd>
+
+      <dt>写真（追加のみ）<span class="tag">任意</span></dt>
+      <dd>本アプリが作る壁紙画像（ウィジェットと同じ色の単色画像）を写真アプリに保存するときだけ使います。追加のみの許可なので、本アプリがお使いの写真を見たり読み取ったりすることはできません。</dd>
+
+      <dt>通知<span class="tag">任意</span></dt>
+      <dd>端末内で作るローカル通知だけを使います。ブロック画面で「アプリでオフにする」を押すと、本アプリに戻るための通知を表示します。プッシュ通知や通知用のサーバーは使いません。</dd>
+    </dl>
+
+    <h3>4. 購入</h3>
+    <p>「ポテトフォン」のProはApp Storeで販売している買い切りの商品（サブスクリプションではありません）で、決済はAppleが行います。開発者が利用者のお名前、支払い情報、Apple Accountの情報を受け取ることはありません。本アプリはAppleのStoreKitで購入状況を確認し、その結果（Proの状態）だけをiPhoneに保存します。購入に関する情報は<a href="https://www.apple.com/legal/privacy/">Appleのプライバシーポリシー</a>に従って扱われます。</p>
+
+    <h3>5. Appleの機能、リンク、ほかのアプリ</h3>
+    <p>Siri、ショートカット、集中モードフィルタ、ウィジェット、コントロールセンターはiOSを通じて動作し、Siriへのリクエストは Apple が処理します。iOSの設定でAppデベロッパへの解析データの共有を許可している場合、Appleが個人を特定できないクラッシュレポートや統計を開発者に提供することがあります。</p>
+    <p>利用者がタップしたリンク（Appleのサポートページ、App Store、iCloudのショートカットのリンク）や、ウィジェットから開くほかのアプリ・Webサイトは、それぞれのプライバシーポリシーに従います。本アプリがそれらに個人情報を渡すことはありません。</p>
+
+    <h3>6. お問い合わせメール</h3>
+    <p>「お問い合わせ」や「アプリをリクエスト」を使うと、teamhyeok@gmail.com 宛てのメールがメールアプリで開きます。送信しない限り、何も送られません。送信された場合、開発者はメールアドレスと本文を受け取ります。「お問い合わせ」のメールには、原因を調べるためにアプリのバージョン、iOSのバージョン、端末のモデルがあらかじめ入っていますが、送信前に削除できます。</p>
+    <p>いただいたメールは返信のためだけに使い、第三者には提供しません。メールはGmailで受け取るため、Google LLC（米国）のサーバーに保存され、<a href="https://policies.google.com/privacy">Googleのプライバシーポリシー</a>に従って扱われます。対応に必要な期間だけ保管し、削除のご依頼があればすぐに削除します。</p>
+
+    <h3>7. 第三者への提供</h3>
+    <p>開発者は個人情報を第三者に提供・販売せず、広告にも使いません。</p>
+
+    <h3>8. 保存期間と削除</h3>
+    <ul>
+      <li>iPhone内の情報は、本アプリで変更するか本アプリを削除するまで残ります。本アプリを削除すると、本アプリが保存した情報はすべて削除されます。</li>
+      <li>アプリがブロックされたまま残らないよう、削除する前にデトックスをオフにしてください。</li>
+      <li>保存した壁紙は写真アプリで削除するまで残り、購入履歴はApple Accountに残ります。</li>
+      <li>お問い合わせメールは、対応に必要なくなった時点で削除します。ご依頼があればそれより前に削除します。</li>
+    </ul>
+
+    <h3>9. 利用者の選択と権利</h3>
+    <ul>
+      <li>ランチャー、スタイル、スケジュール、ロックは、本アプリでいつでも変更・削除できます。</li>
+      <li>アクセス許可は、iOSの「設定」アプリでいつでもオフにできます。スクリーンタイムは 設定 &gt; スクリーンタイム にあります。</li>
+      <li>お送りいただいたメールの開示・訂正・削除などのご請求は、<a href="mailto:teamhyeok@gmail.com">teamhyeok@gmail.com</a> までご連絡ください。</li>
+    </ul>
+
+    <h3>10. お子さまについて</h3>
+    <p>本アプリは13歳未満のお子さまを対象としていません。お子さまの個人情報を故意に取得することはありません。13歳未満のお子さまからメールが届いたことが分かった場合は、速やかに削除します。</p>
+
+    <h3>11. 安全管理</h3>
+    <p>情報はiPhoneの中にとどまり、iOSのサンドボックスとデータ保護によって守られます。本アプリには、情報を保管するサーバーがありません。PINとNFCタグの識別番号は、ハッシュとしてのみ保存します。</p>
+
+    <h3>12. 本ポリシーの変更</h3>
+    <p>取り扱いが変わる場合は、このページと施行日を更新します。今後、情報を取得するバージョンを出すことになった場合は、そのバージョンの公開前に本ポリシーを改定します。</p>
+
+    <h3>13. お問い合わせ先</h3>
+    <div class="contact">
+      <p><b>teamhyeok</b>（「ポテトフォン」開発者）</p>
+      <p>メール：<a href="mailto:teamhyeok@gmail.com">teamhyeok@gmail.com</a></p>
+    </div>
+
+    <p class="note">このページについて：Cookieは使わず、ほかのサイトから何も読み込みません。GitHub Pagesで公開しており、GitHubがセキュリティのために訪問者のIPアドレスを記録することがあります（<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシーに関する声明</a>）。</p>
+  </article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><span lang="en">Potato Phone</span> · <span lang="ko">깡통폰</span> · <span lang="ja">ポテトフォン</span> — teamhyeok · <a href="mailto:teamhyeok@gmail.com">teamhyeok@gmail.com</a></p>
+  </div>
+</footer>
+
+<script>
+  // Jump to the visitor's language. Without JavaScript the page still reads top to bottom
+  // (English, 한국어, 日本語) and the language links above work as plain anchors.
+  (function () {
+    try {
+      if (location.hash) return;                        // a link already chose a section
+      var nav = window.performance && performance.getEntriesByType
+        ? performance.getEntriesByType("navigation")[0] : null;
+      if (nav && (nav.type === "reload" || nav.type === "back_forward")) return;  // keep the restored position
+
+      var list = navigator.languages && navigator.languages.length
+        ? navigator.languages : [navigator.language || ""];
+      var lang = "en";
+      for (var i = 0; i < list.length; i++) {
+        var code = String(list[i] || "").toLowerCase().split("-")[0];
+        if (code === "en" || code === "ko" || code === "ja") { lang = code; break; }
+      }
+      if (lang === "en") return;                        // English comes first; stay at the top
+
+      var target = document.getElementById(lang);
+      if (target) target.scrollIntoView(true);
+    } catch (e) { /* stay at the top */ }
+  })();
+</script>
+</body>
+</html>
