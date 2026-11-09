@@ -262,7 +262,7 @@
     <header>
       <p class="eyebrow">English</p>
       <h2>Potato Phone Privacy Policy</h2>
-      <p class="meta">Effective <time datetime="2026-10-16">October 16, 2026</time> · Developer: teamhyeok</p>
+      <p class="meta">Effective <time datetime="2026-11-09">November 9, 2026</time> · Developer: teamhyeok</p>
     </header>
 
     <p class="lead">Potato Phone (<span lang="ko">깡통폰</span> in Korean, <span lang="ja">ポテトフォン</span> in Japanese) is an iOS app that makes your Home Screen quiet with text-only widgets and blocks distracting apps with Screen Time. It is built so that your data stays on your iPhone.</p>
@@ -271,15 +271,16 @@
       <h3>In short</h3>
       <ul>
         <li>No account and no sign-in.</li>
-        <li>No analytics, ads or tracking. The app makes no network requests of its own.</li>
+        <li>No analytics, ads or tracking. The app sends no data about you; its only request of its own is a daily App Store version check.</li>
         <li>Everything you set up stays on your iPhone. We never receive it.</li>
         <li>We share nothing with third parties.</li>
       </ul>
     </section>
 
     <h3>1. What we collect</h3>
-    <p>Nothing. Potato Phone has no account or sign-in and does not collect personal information. It contains no analytics, advertising, crash-reporting or tracking SDKs (no third-party code at all), it does not use the advertising identifier, and it does not track you across other companies’ apps or websites. The app itself never sends a network request, so nothing you enter or set up in it reaches us or anyone else.</p>
+    <p>Nothing. Potato Phone has no account or sign-in and does not collect personal information. It contains no analytics, advertising, crash-reporting or tracking SDKs (no third-party code at all), it does not use the advertising identifier, and it does not track you across other companies’ apps or websites. The app sends nothing you enter or set up in it, so none of it reaches us or anyone else.</p>
     <p>The only time we receive anything is when you choose to email us (section 6).</p>
+    <p><b>Update check.</b> Once a day, when you open the app, it asks Apple’s App Store whether a newer version of Potato Phone is out. The request carries only the app’s bundle ID and the region set on your iPhone — nothing about you, your lists or how you use your iPhone — and it goes to Apple, not to us. As with any internet request, Apple’s servers can see your device’s IP address. If there is a newer version, the app shows a notice on its Home screen and in Settings. If the check fails, nothing happens, and the app tries again an hour later at the earliest.</p>
 
     <h3>2. What stays on your iPhone</h3>
     <p>To work, the app saves the following in its own storage on your iPhone. Most of it is kept in an App Group, a container shared only with the app’s own widgets and Screen Time extensions.</p>
@@ -288,7 +289,7 @@
       <li><b>Styles:</b> theme, colors, font, size, spacing, alignment, numbering and standby text.</li>
       <li><b>Detox settings:</b> mode, schedules, the apps you picked (as Screen Time tokens, see section 3) and your lock. A PIN is kept only as a salted <span class="nowrap">SHA-256</span> hash; an NFC tag only as a <span class="nowrap">SHA-256</span> hash of its identifier, plus the name you give it.</li>
       <li><b>Detox status:</b> whether detox is on, when it ends and how many pauses are left today.</li>
-      <li>Fonts that come with the app, copied there so the widgets can use them, and a few small flags (for example, whether a notice was already shown).</li>
+      <li>A few small records: for example, whether a notice was already shown, how many days you have used the app, how many times you opened an app from the widgets (not which ones), when the app last asked whether you’re satisfied, and the last update check.</li>
     </ul>
     <p>None of this is sent to us or to anyone else, and we cannot see it. If you back up your iPhone with iCloud Backup or a computer, iOS may include it in that backup. Backups are handled by Apple, and we have no access to them.</p>
 
@@ -316,7 +317,7 @@
     <p>Links you tap (Apple support pages, the App Store, an iCloud link to a shortcut) and the apps or websites your widgets open are handled by those apps and websites under their own privacy policies. Potato Phone doesn’t pass your personal information to them.</p>
 
     <h3>6. If you email us</h3>
-    <p>“Contact us” and “Request an app” open your Mail app with a message to teamhyeok@gmail.com. Nothing is sent unless you send it. If you do, we receive your email address and what you wrote. To help us troubleshoot, a “Contact us” message starts with the app version, iOS version and device model; you can delete those lines before sending.</p>
+    <p>“Contact us”, “Request an app” and the “Send feedback” button on Home open an email to teamhyeok@gmail.com. Nothing is sent unless you send it. If you do, we receive your email address and what you wrote. To help us troubleshoot, a “Contact us” or “Send feedback” message starts with the app version, iOS version and device model; you can delete those lines before sending.</p>
     <p>We use your message only to reply to you, and we don’t share it. Email is received through Gmail, so it is stored on servers of Google LLC (United States) under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. We keep it only as long as needed to help you, and delete it right away if you ask.</p>
 
     <h3>7. Sharing with third parties</h3>
@@ -360,7 +361,7 @@
     <header>
       <p class="eyebrow">한국어</p>
       <h2>깡통폰 개인정보 처리방침</h2>
-      <p class="meta">시행일 <time datetime="2026-10-16">2026년 10월 16일</time> · 개발자 teamhyeok</p>
+      <p class="meta">시행일 <time datetime="2026-11-09">2026년 11월 9일</time> · 개발자 teamhyeok</p>
     </header>
 
     <p class="lead">teamhyeok(이하 “개발자”)는 iOS 앱 깡통폰(영문 <span lang="en">Potato Phone</span>, 일본어 <span lang="ja">ポテトフォン</span>, 이하 “앱”)을 쓰는 분의 개인정보를 보호하기 위해 「개인정보 보호법」 제30조에 따라 이 처리방침을 공개합니다. 앱은 처음부터 개인정보를 수집하지 않도록 만들었습니다.</p>
@@ -369,19 +370,20 @@
       <h3>요약</h3>
       <ul>
         <li>회원가입과 로그인이 없습니다.</li>
-        <li>분석·광고·추적 도구가 없고, 앱이 스스로 하는 네트워크 통신도 없습니다.</li>
+        <li>분석·광고·추적 도구가 없습니다. 앱이 스스로 보내는 요청은 하루 한 번의 새 버전 확인뿐이며, 이용자에 관한 정보는 담기지 않습니다.</li>
         <li>앱에서 정한 내용은 이용자의 iPhone에만 저장되며 개발자에게 전송되지 않습니다.</li>
         <li>개인정보를 제3자에게 제공하지 않습니다.</li>
       </ul>
     </section>
 
     <h3>1. 수집하는 개인정보 항목</h3>
-    <p>앱은 개인정보를 수집하지 않습니다. 회원가입·로그인이 없고, 분석·광고·오류 보고·추적용 SDK 같은 외부 코드를 하나도 넣지 않았습니다. 광고 식별자(IDFA)를 쓰지 않으며, 다른 회사의 앱이나 웹사이트에 걸쳐 이용자를 추적하지 않습니다. 앱은 스스로 네트워크 요청을 보내지 않으므로, 앱에서 입력하거나 설정한 내용은 개발자나 다른 누구에게도 전달되지 않습니다.</p>
+    <p>앱은 개인정보를 수집하지 않습니다. 회원가입·로그인이 없고, 분석·광고·오류 보고·추적용 SDK 같은 외부 코드를 하나도 넣지 않았습니다. 광고 식별자(IDFA)를 쓰지 않으며, 다른 회사의 앱이나 웹사이트에 걸쳐 이용자를 추적하지 않습니다. 앱은 이용자가 입력하거나 설정한 내용을 보내지 않으므로, 그 내용은 개발자나 다른 누구에게도 전달되지 않습니다.</p>
     <p>개발자가 정보를 받는 경우는 이용자가 직접 문의 메일을 보낼 때뿐이며, 이때 받는 항목은 다음과 같습니다.</p>
     <ul>
       <li>이메일 주소, 문의 내용</li>
-      <li>앱 버전, iOS 버전, 기기 모델 (‘문의하기’ 메일 본문에 미리 적혀 있으며, 보내기 전에 지울 수 있습니다)</li>
+      <li>앱 버전, iOS 버전, 기기 모델 (‘문의하기’와 홈의 ‘의견 보내기’ 메일 본문에 미리 적혀 있으며, 보내기 전에 지울 수 있습니다)</li>
     </ul>
+    <p><b>새 버전 확인.</b> 앱을 열면 하루에 한 번, 깡통폰의 새 버전이 나왔는지 Apple의 App Store에 확인합니다. 이 요청에는 앱의 번들 ID와 iPhone에 설정된 지역만 담기며, 이용자나 목록, iPhone 사용에 관한 정보는 담기지 않습니다. 요청은 개발자가 아니라 Apple로 가고, 다른 인터넷 요청과 마찬가지로 Apple 서버는 기기의 IP 주소를 볼 수 있습니다. 새 버전이 있으면 앱의 홈 화면과 설정에 알려 드리고, 확인하지 못하면 아무 일도 일어나지 않으며 빨라도 한 시간 뒤에 다시 확인합니다.</p>
 
     <h3>2. 개인정보의 이용 목적</h3>
     <p>문의 메일로 받은 정보는 문의에 답하는 데에만 씁니다. 그 밖의 목적으로 이용하지 않습니다.</p>
@@ -399,7 +401,7 @@
       <li><b>꾸미기:</b> 테마, 색, 글꼴, 크기, 간격, 정렬, 번호, 대기화면 문구</li>
       <li><b>디톡스 설정:</b> 방식, 예약, 고른 앱(스크린 타임 토큰, 5항), 잠금. PIN은 솔트를 더한 <span class="nowrap">SHA-256</span> 해시로만, NFC 태그는 고유번호의 <span class="nowrap">SHA-256</span> 해시와 이용자가 붙인 이름으로만 저장합니다.</li>
       <li><b>디톡스 상태:</b> 켜져 있는지, 언제 끝나는지, 오늘 남은 풀기 횟수</li>
-      <li>위젯이 쓰도록 복사해 둔 앱 내장 글꼴, 안내를 이미 보였는지 같은 작은 표시값</li>
+      <li>작은 기록: 안내를 이미 보였는지, 앱을 쓴 날의 수, 위젯으로 앱을 연 횟수(어떤 앱인지는 남기지 않습니다), 만족도를 마지막으로 물어본 때, 마지막 새 버전 확인</li>
     </ul>
     <p>iCloud 백업이나 컴퓨터로 iPhone을 백업하면 iOS가 이 정보를 백업에 포함할 수 있습니다. 백업은 Apple이 처리하며 개발자는 접근할 수 없습니다.</p>
 
@@ -480,7 +482,7 @@
     </ul>
 
     <h3>17. 개인정보 처리방침의 변경</h3>
-    <p>이 처리방침은 2026년 10월 16일부터 적용됩니다. 내용이 바뀌면 이 페이지에 새 시행일과 함께 알립니다. 앞으로 개인정보를 수집하는 버전을 내게 되면, 그 버전을 내놓기 전에 이 처리방침을 먼저 고칩니다.</p>
+    <p>이 처리방침은 2026년 11월 9일부터 적용됩니다. 내용이 바뀌면 이 페이지에 새 시행일과 함께 알립니다. 앞으로 개인정보를 수집하는 버전을 내게 되면, 그 버전을 내놓기 전에 이 처리방침을 먼저 고칩니다.</p>
   </article>
 
   <!-- ===================================================== 日本語 -->
@@ -488,7 +490,7 @@
     <header>
       <p class="eyebrow">日本語</p>
       <h2>ポテトフォン <span class="nowrap">プライバシーポリシー</span></h2>
-      <p class="meta">施行日 <time datetime="2026-10-16">2026年10月16日</time> · 開発者 teamhyeok</p>
+      <p class="meta">施行日 <time datetime="2026-11-09">2026年11月9日</time> · 開発者 teamhyeok</p>
     </header>
 
     <p class="lead">teamhyeok（以下「開発者」）は、iOSアプリ「ポテトフォン」（英語名 <span lang="en">Potato Phone</span>、韓国語名 <span lang="ko">깡통폰</span>。以下「本アプリ」）における利用者の情報の取り扱いについて、以下のとおり定めます。本アプリは、個人情報を取得しない設計になっています。</p>
@@ -497,15 +499,16 @@
       <h3>要点</h3>
       <ul>
         <li>アカウント登録やサインインはありません。</li>
-        <li>分析・広告・トラッキングの仕組みはありません。本アプリが自ら通信することもありません。</li>
+        <li>分析・広告・トラッキングの仕組みはありません。本アプリが自ら送る通信は1日1回の新バージョン確認だけで、利用者に関する情報は含みません。</li>
         <li>本アプリで設定した内容はお使いのiPhoneの中だけに保存され、開発者には送信されません。</li>
         <li>第三者に情報を提供することはありません。</li>
       </ul>
     </section>
 
     <h3>1. 取得する情報</h3>
-    <p>本アプリは個人情報を取得しません。アカウントやサインインはなく、分析・広告・クラッシュレポート・トラッキング用のSDKなど、外部のコードは一切含まれていません。広告識別子（IDFA）は使わず、他社のアプリやWebサイトをまたいで利用者を追跡することもありません。本アプリは自らネットワーク通信を行わないため、本アプリで入力・設定した内容が開発者やほかの誰かに届くことはありません。</p>
+    <p>本アプリは個人情報を取得しません。アカウントやサインインはなく、分析・広告・クラッシュレポート・トラッキング用のSDKなど、外部のコードは一切含まれていません。広告識別子（IDFA）は使わず、他社のアプリやWebサイトをまたいで利用者を追跡することもありません。本アプリは入力・設定した内容を送信しないため、その内容が開発者やほかの誰かに届くことはありません。</p>
     <p>開発者が情報を受け取るのは、利用者がご自身でメールを送ってくださった場合だけです（6をご覧ください）。</p>
+    <p><b>新しいバージョンの確認。</b>本アプリを開くと1日に1回、「ポテトフォン」の新しいバージョンが出ているかをAppleのApp Storeに確認します。この通信には本アプリのバンドルIDとiPhoneに設定された地域だけが含まれ、利用者やリスト、iPhoneの使い方に関する情報は含みません。送信先は開発者ではなくAppleで、ほかのインターネット通信と同じく、AppleのサーバーからはデバイスのIPアドレスが見えます。新しいバージョンがあれば、本アプリのホームと設定でお知らせします。確認できなかった場合は何も起こらず、早くても1時間後にもう一度確認します。</p>
 
     <h3>2. iPhoneの中だけに保存される情報</h3>
     <p>本アプリは動作のために、次の情報をiPhone内の保存領域に保存します。その多くは、本アプリと本アプリのウィジェット・スクリーンタイム拡張機能だけが共有する領域（App Group）にあります。</p>
@@ -514,7 +517,7 @@
       <li><b>スタイル：</b>テーマ、色、フォント、サイズ、間隔、揃え、番号、待受メッセージ</li>
       <li><b>デトックスの設定：</b>方法、スケジュール、選んだアプリ（スクリーンタイムのトークン。3を参照）、ロック。PINはソルト付きの<span class="nowrap">SHA-256</span>ハッシュとしてのみ、NFCタグは識別番号の<span class="nowrap">SHA-256</span>ハッシュと付けた名前としてのみ保存します。</li>
       <li><b>デトックスの状態：</b>オンかどうか、終了時刻、今日の残りの一時解除回数</li>
-      <li>ウィジェットで使うためにコピーした内蔵フォント、案内を表示済みかどうかなどの小さな記録</li>
+      <li>小さな記録：案内を表示済みかどうか、本アプリを使った日数、ウィジェットからアプリを開いた回数（どのアプリかは記録しません）、満足度を最後にお聞きした日時、最後の新バージョン確認</li>
     </ul>
     <p>これらの情報が開発者やほかの誰かに送信されることはなく、開発者が見ることもできません。iCloudバックアップやコンピュータでiPhoneをバックアップすると、iOSがこれらをバックアップに含めることがあります。バックアップはAppleが扱うもので、開発者はアクセスできません。</p>
 
@@ -542,7 +545,7 @@
     <p>利用者がタップしたリンク（Appleのサポートページ、App Store、iCloudのショートカットのリンク）や、ウィジェットから開くほかのアプリ・Webサイトは、それぞれのプライバシーポリシーに従います。本アプリがそれらに個人情報を渡すことはありません。</p>
 
     <h3>6. お問い合わせメール</h3>
-    <p>「お問い合わせ」や「アプリをリクエスト」を使うと、teamhyeok@gmail.com 宛てのメールがメールアプリで開きます。送信しない限り、何も送られません。送信された場合、開発者はメールアドレスと本文を受け取ります。「お問い合わせ」のメールには、原因を調べるためにアプリのバージョン、iOSのバージョン、端末のモデルがあらかじめ入っていますが、送信前に削除できます。</p>
+    <p>「お問い合わせ」「アプリをリクエスト」やホームの「フィードバックを送る」ボタンを使うと、teamhyeok@gmail.com 宛てのメールが開きます。送信しない限り、何も送られません。送信された場合、開発者はメールアドレスと本文を受け取ります。「お問い合わせ」と「フィードバックを送る」のメールには、原因を調べるためにアプリのバージョン、iOSのバージョン、端末のモデルがあらかじめ入っていますが、送信前に削除できます。</p>
     <p>いただいたメールは返信のためだけに使い、第三者には提供しません。メールはGmailで受け取るため、Google LLC（米国）のサーバーに保存され、<a href="https://policies.google.com/privacy">Googleのプライバシーポリシー</a>に従って扱われます。対応に必要な期間だけ保管し、削除のご依頼があればすぐに削除します。</p>
 
     <h3>7. 第三者への提供</h3>
